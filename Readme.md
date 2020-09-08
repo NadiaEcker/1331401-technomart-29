@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Nadia Martyniuk](https://up.htmlacademy.ru/htmlcss/29/user/1331401).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Литвинов](https://htmlacademy.ru/profile/nmrhard).
 
 ---
 
