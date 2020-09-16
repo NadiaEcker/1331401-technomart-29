@@ -15,7 +15,7 @@
     <input name="Search" type="search" id="Search">
 </form>
       <a href="blank.html">Закладки</a>
-      <a href="blank.html">Корзина</a>
+      <a href="blank.html">Корзина: 10</a>
       <a href="blank.html">Оформить заказ</a>
 </div>
 <div>
@@ -49,23 +49,51 @@
   <h1>Каталог</h1>
 
   <ul>
-    <li><a href="index.html"><img src="img/catalog/mm.png" alt="Главная страница"><a></li>
+    <li><a href="index.html"><img src="img/catalog/mm.png" alt="Главная страница">/<a></li>
     <li><a href="catalog.html">Каталог</a></li>
     <li><a href="blank.html">Инструмент</a></li>
     <li><a href="blank.html">Перфораторы</a></li>
 
+<aside>
+<h3>Фильтр товаров</h3>
+<form action="#" method="get">
+<fieldset>
+<legend>Цена</legend>
+<label>от<input type="text" value="0"></label>
+<label>до<input type="text" value="30000"></label>
+</fieldset>
+<fieldset>
+<legend>Производители</legend>
+<label><input type="checkbox" name="brands" checked value="bosch">BOSCH</label>
+<label><input type="checkbox" name="brands" value="interskol">Интерскол</label>
+<label><input type="checkbox" name="brands" checked value="makita">MAKITA</label>
+<label><input type="checkbox" name="brands" value="dewaly">DEWALT</label>
+<label><input type="checkbox" name="brands" value="hitachi">HITACHI</label>
+</fieldset>
+<fieldset>
+<legend>Питание</legend>
+<label><input type="checkbox" name="battery" checked value="battery">Аккумуляторные</label>
+<label><input type="checkbox" name="network" value="network">Сетевые</label>
+</fieldset>
+<button type="reset">Показать</button>
+</form>
+<aside>
+
 <section>
-<h2>Фильтр товаров</h2>
-    <!-- Здесь будет форма фильтра -->
+<h3>Сортировка</h3>
+<ul class="sorting-button">
+  <li><button class="sorting-button-price" type="button">По цене</button></li>
+  <li><button class="sorting-button-type" type="button">По типу</button></li>
+  <li><button class="sorting-button-functional" type="button">По функционлау</button></li>
+</ul>
+<ul>
+  <li><button class="ascending" type="button">По возрастанию</button></li>
+  <li><button class="descending" type="button">По убыванию</button></li>
+</ul>
 </section>
 
 <section>
-<h2>Сортировка</h2>
-  <!-- Здесь будет форма фильтра -->
-</section>
-
-<section>
-<h1>Перфораторы</h1>
+<h2>Перфораторы</h2>
 <ul>
 
 <li><img src="img\catalog\perforator\p1.png" width="144" height="128">
@@ -98,7 +126,7 @@
                <li><span>new<span>
                  <img src="img\catalog\perforator\p1.png" width="144" height="128">
                  <h3>Перфоратор BOSCH BFG 2000</h3>
-                  <a href="blank.html">15500 Р.</a></li>
+                  <a href="blank.html">12500 Р.</a></li>
 
                   <li><img src="img\catalog\perforator\p1.png" width="144" height="128">
                     <h3>Перфоратор BOSCH BFG 9000</h3>
@@ -109,9 +137,15 @@
                        <h3>Перфоратор BOSCH BFG 9000</h3>
                        <p><s>30500 Р.</s></p>
                         <a href="blank.html">12500 Р.</a></li>
+
+                        <li><span>new<span>
+                          <img src="img\catalog\perforator\p1.png" width="144" height="128">
+                          <h3>Перфоратор BOSCH BFG 2000</h3>
+                           <a href="blank.html">12500 Р.</a></li>
                       </ul>
-                      <ul>
-      </section>
+
+
+  <ul>
       <li>
         <a>1</a>
       </li>
@@ -127,7 +161,7 @@
     </ul>
 </section>
 <div>
-<h2>Пара слов о перфораторах</h1>
+<h2>Пара слов о перфораторах</h2>
 <p> Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
 Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
 В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.<p>
@@ -157,7 +191,7 @@
  </p>
 </section>
 
-<section>
+<span>
 <h2>Давайте дружить!</h2>
 <ul>
   <li>
@@ -170,7 +204,7 @@
     <a href="#">Инстаграм</a>
   </li>
 </ul>
-</section>
+</span>
 <p>
  Обратная связь:
  <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
