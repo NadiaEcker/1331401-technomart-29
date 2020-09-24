@@ -26,6 +26,7 @@
   --special-cream: #F7F3EC;
   --white: #ffffff;
   --black: #000000;
+  --dark-bottom: #212A3A;
 }
 
 /* Global */
@@ -504,10 +505,37 @@ text-decoration: underline;
   background-color: var(--darkblue);
 }
 
+.footer-social li{
+  list-style: none;
+  background-color: var(--dark-bottom);
+}
+
+
+.footer-social li:hover
+.footer-social li:active{
+  list-style: none;
+  background-color: var(--active-red);
+}
+
+.footer-social a{
+  color: var(--white);
+}
+
+
 .mailto{
 color: var(--special-yellowlight);
 }
 
 .creator {
 color: var(--special-yellowlight);
+}
+
+.mailto:hover,
+.creator:hover {
+  text-decoration: underline;
+}
+
+.mailto:active,
+.creator:active{
+  color: var(--active-red);
 }
