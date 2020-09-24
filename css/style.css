@@ -81,11 +81,16 @@ margin: -1px;
   color: var(--white);
 }
 
-.search{
+.search-input{
 background-color: var(--darkblue);
+color: var(--white);
 }
 
-.search:hover{
+::placeholder {
+  color: var(--white);
+}
+
+.search-input:focus{
   background-color: var(--white);
   color: var(--black);
 }
