@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -10,16 +11,16 @@
   <body class="page-body">
 <header class="main-header">
  <div class="main-navigation">
-      <a class="main-header-logo">Техномарт</a>
+      <a class="main-header-logo"><img src="img/logo.png" width="106,83px" height="16,9px" alt="Логотип «Техномарт»"></a>
   <form class="search">
-    <input name="Search" type="search" id="Search" placeholder="Поиск">
+    <input class="search-input" name="Search" type="search" id="Search" placeholder="Поиск">
   </form>
       <a class="main-navigation-link link-marker" href="blank.html">Закладки</a>
       <a class="main-navigation-link link-basket" href="blank.html">Корзина</a>
       <a class="main-navigation-link link-order" href="blank.html">Оформить заказ</a>
  </div>
 
- <div>
+ <div class="middle-header">
   <p class="about-company">Интернет-магазин<br>
   строительных материалов<br>
   и инструментов для ремонта</p>
@@ -28,7 +29,7 @@
   г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
   </p>
 
-  <a class="enter-link enter" href="blank.html">Войти</a>
+  <a class="enter-link enter enter-catalog" href="blank.html">Войти</a>
   <a class="enter-link registration" href="blank.html">Регистрация</a>
  </div>
 <nav class="site-navigation">
@@ -45,16 +46,19 @@
 
 </header>
 
+ <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
+
 <main class="container">
 
    <section>
   <div class="slider"> <h3> Перфораторы</h3>
      <p>Настоящие мужские игрущки!</p>
     <ul>
-       <li><button class="slider-button-back" type="button" name="left">Предыдущий слайд</button></li>
-       <li><button class="slider-button-next" type="button" name="right">Следующий слайд</button></li>
+       <img src="img/layer1.png" width="620p" height="266" фalt="Перфораторы">
+       <li><button class="slider-button slider-button-back" type="button" name="left">Предыдущий слайд</button></li>
+       <li><button class="slider-button slider-button-next" type="button" name="right">Следующий слайд</button></li>
     </ul>
-    <a class="slider-link" href="catalog.html">Открыть каталог</a>
+    <a class="button slider-link" href="catalog.html">Открыть каталог</a>
   </div>
    <ul class="offers">
      <li class="materials-offer"><h3>Материалы</h3>
@@ -70,37 +74,37 @@
    </ul>
   </section>
 
-  <section>
-   <div class="divide">
+  <section class="section-popitems">
+   <div class="section-header">
      <h2>Популярные товары</h2>
-     <a class="divide-link" href="blank.html">Все популярные товары</a>
+     <a class="button section-header-link" href="blank.html">Все популярные товары</a>
    </div>
-   <ul class="popular-items">
-  <li>
-     <img src="img/popular/p1.png" width="184" height="164">
+   <ul class="products-list">
+  <li class="products">
+     <img src="img/popular/p1.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
      <h3>Перфоратор BOSCH<br> BFG 9000</h3>
      <p><s>32500 Р.</s></p>
      <a href="blank.html">25500 Р.</a>
   </li>
 
-  <li>
+  <li class="products">
      <span class="new">new</span>
-     <img src="img/popular/p2.png" width="127" height="112">
+     <img src="img/popular/p2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
      <h3>Перфоратор BOSCH<br> BFG 3000</h3>
      <p><s>22500 Р.</s></p>
       <a href="blank.html">15500 Р.</a>
   </li>
 
-  <li>
-     <img src="img/popular/p3.png" width="144" height="128">
+  <li class="products">
+     <img src="img/popular/p3.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
      <h3>Перфоратор BOSCH<br> BFG 6000</h3>
      <p><s>30500 Р.</s></p>
      <a href="blank.html">25500 Р.</a>
   </li>
 
-   <li>
+   <li class="products">
      <span class="new">new</span>
-     <img src="img/popular/p4.png" width="127" height="112">
+     <img src="img/popular/p4.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
      <h3>Перфоратор BOSCH<br> BFG 3000</h3>
      <a href="blank.html">12500 Р.</a>
    </li>
@@ -108,8 +112,8 @@
  </section>
 
   <section>
-    <div class="divide"><h2>Популярные производители</h2>
-    <a class="divide-link" href="blank.html">Все производители</a>
+    <div class="dsection-header"><h2>Популярные производители</h2>
+    <a class="button section-header-link" href="blank.html">Все производители</a>
   </div>
     <ul class="popular-brands">
       <li><a href="blank.html"><img src="img/brands/bosch.png"  width="126" height="37" alt="BOSCH" ></a></li>
@@ -158,7 +162,7 @@
     <li>ЖелДорЭкспидиция</li>
    </ul>
 
-  <a class="red-link" href="blank.html">Подробнее о компании</a>
+  <a class="button red-link" href="blank.html">Подробнее о компании</a>
   </section>
 
   <section class="contacts">
@@ -166,14 +170,15 @@
    <p>Вы можете забрать товар сами,<br>
    заехав в наш офис:</p>
    <img class="map" src="img/map.png" width="300" height="158" alt="Карта">
-  <a class="red-link" href="blank.html">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ! </a>
+  <a class="button red-link" href="blank.html">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ! </a>
  </section>
 </div>
 </main>
 
 <footer class="page-footer">
-    <a class="footer-logo">Техномарт</a>
+    <a class="footer-logo"><img src="img/logo.png" width="106,83px" height="16,9px" alt="Логотип «Техномарт»"></a>
     <ul class="main-footer">
+      <h2 class="visually-hidden">Контактная информация</h2>
       <li><a href="blank.html">Компания </a> </li>
       <li><a href="blank.html">Новости </a> </li>
       <li><a href="blank.html">Доставка </a> </li>
@@ -186,6 +191,7 @@
 
 <div class="bottom-footer">
     <section class="footer-contacts">
+      <h2 class="visually-hidden">Давайте дружить!</h2>
    <p class="footer-adress">
 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
      Телефон: <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>

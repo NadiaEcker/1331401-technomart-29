@@ -23,6 +23,7 @@
   --grey-blue: #32425C;
   --rectangle: rgba(0, 0, 0, 0.25);
   --cream: #F9F5F0;
+  --special-cream: #F7F3EC;
   --white: #ffffff;
   --black: #000000;
 }
@@ -33,7 +34,7 @@ body{
   min-width: 940px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", "Cuprum", Arial, sens-sans-serif;
+  font-family: "PT Sans", "Cuprum", Arial, sens-serif;
   font-size: 13x;
   line-height: 24px;
   font-weight: normal;
@@ -48,6 +49,14 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden{
+position: absolute;
+clip: rect(0 0 0 0);
+width: 1px;
+height: 1px;
+margin: -1px;
 }
 
 /* Main navigation */
@@ -67,14 +76,15 @@ img {
 }
 
 .main-header-logo{
-
   background-color: var(--basic-red);
   color: var(--white);
 }
 
+.search{
+background-color: var(--darkblue);
+}
+
 .search:hover{
-  width: 271px;
-  height: 42px;
   background-color: var(--white);
   color: var(--black);
 }
@@ -84,11 +94,23 @@ img {
 }
 
 .main-navigation-link:active {
-  color: var(--basic-greylight)
+  color: var(--basic-greylight);
+}
+
+.basket-full{
+  background-color: var(--basic-red);
 }
 
 .link-order{
   background-color: var(--basic-green);
+}
+
+.link-order:hover{
+  background-color: var(--success);
+}
+
+.link-order:active{
+  color: var(--basic-greylight);
 }
 
 .about-company {
@@ -96,7 +118,6 @@ img {
  font-size: 16px;
  line-height: 23px;
  color: var(--basic-red);
-
 }
 
 .adress{
@@ -128,23 +149,50 @@ img {
   color: var(--basic-greylight);
 }
 
+.enter-catalog{
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.enter-catalog:active{
+  color: var(--basic-greylight);
+}
+
+.under-account{
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--grey-blue);
+}
+
+.under-account:hover{
+  color: var(--basic-red);
+}
+
+.under-account:active{
+  color: var(--basic-greylight);
+}
+
 /* User navigation */
 
+.button{
+background-color: var(--basic-red);
+color: var(--white);
+}
+
 .site-navigation{
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--grey-blue);
   width: 940px;
   height: 60px;
+  background-color: var(--grey-blue);
   text-align: center;
+  display: inline;
 
 }
 
 .site-navigation li {
+  background-color: var(--grey-blue);
   display: inline;
-  height: 24px;
-  padding: 20px;
-
 }
 
 .site-navigation li:hover{
@@ -153,6 +201,7 @@ img {
 
 .site-navigation li:active{
   background-color:var(--activeblue);
+  color: var(--basic-greylight);
 }
 
 .site-navigation a {
@@ -160,10 +209,13 @@ img {
   color: var(--white);
 }
 
-.slider{
-  background-color: var(--darkblue);
-  width: 620px;
-  height: 266px;
+.site-navigation a:active {
+  color: var(--basic-greylight);
+}
+
+.breadcrumbs {
+  list-style: none;
+  text-transform: uppercase;
 }
 
 .slider h3{
@@ -174,8 +226,6 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   color: var(--white);
-  width: 124px;
-  height: 36px;
   background-color: var(--rectangle);
 }
 
@@ -186,16 +236,12 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
-  width: 173px;
-  height: 24px;
-  background-color: var(--rectangle);
+r: var(--rectangle);
 }
 
 .slider a{
   background-color: var(--basic-red);
   color: var(--white);
-  width: 192px;
-  height: 38px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -225,6 +271,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: var(--white);
+  background-color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
 }
 
@@ -266,24 +313,40 @@ img {
   height: 123px;
 }
 
-.divide {
+.section-header {
   text-transform: uppercase;
   background-color: var(--cream);
-  margin-left: auto;
-  margin-right: auto;
   width: 940px;
   height: 89px;
 }
 
-.divide a{
+.section-header a{
   style: none;
   background-color: var(--active-red);
   color: var(--white);
 }
 
+/* Filters */
+
+.filters{
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--special-cream);
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+  color: var(--special);
+}
+
 /* popular */
 
-.popular-items {
+.products-list {
   list-style: none;
   display: inline;
   padding: 4px;
@@ -293,20 +356,20 @@ img {
   text-align: center;
 }
 
-.popular-items h3{
+.products-list h3{
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
 }
 
-.popular-items s{
+.products-list s{
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   color: var(--active-grey)
 }
 
-.popular-items a{
+.products-list a{
   background-color: var(--basic-red);
   color: var(--white);
   font-weight: bold;
@@ -314,13 +377,24 @@ img {
   line-height: 18px;
 }
 
-.popular-brands{list-style: none;
- border: 1px solid var(--border-grey);
- width: 220px;
- height: 145px;
+.popular-brands{
+ list-style: none;
  text-align: center;
  display: inline;
 }
+
+.popular-brands li:hover{
+  border: 1px solid var(--border-grey);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+
+}
+
+.popular-brands li:active{
+  border: 1px solid var(--border-grey);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  opacity: 0.5;
+}
+
 /*service*/
 .service{
 background-color: var(--basic-background);
@@ -354,7 +428,7 @@ text-transform: uppercase;
   background-color: var(--darkblue);
 }
 
-.service-button button:active{
+.service-button button:disabled{
   background-color: var(--white);
   color: var(--grey-blue);
 }
@@ -375,11 +449,6 @@ font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 24px;
-}
-
-.red-link{
-  background-color: var(--basic-red);
-  color: var(--white);
 }
 
 /*footer*/
@@ -403,12 +472,26 @@ background-color: var(--grey-blue);
   display: inline;
 }
 
+.main-footer li:hover{
+text-decoration: underline;
+}
+
 .main-footer a{
   color: var(--white);
 }
 
+.main-footer a:active{
+  color: var(--basic-background);
+  opacity: 0.5;
+}
+
 .yellow-footer a{
   color: var(--special-yellowlight);
+}
+
+.yellow-footer a:active{
+  color: var(--special-yellowlight);
+  opacity: 0.5;
 }
 
 .footer-phone{
