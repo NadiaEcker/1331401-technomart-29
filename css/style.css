@@ -86,7 +86,7 @@ background-color: var(--darkblue);
 color: var(--white);
 }
 
-::placeholder {
+.search-input::placeholder {
   color: var(--white);
 }
 
@@ -222,6 +222,19 @@ color: var(--white);
 .breadcrumbs {
   list-style: none;
   text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.section-catalog{
+  font-family: Cuprum;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: var(--basic-background);
+  color: var(--grey-blue);
+  width: 940px;
+  height: 89px;
 }
 
 .slider h3{
@@ -242,27 +255,36 @@ color: var(--white);
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
-r: var(--rectangle);
 }
 
 .slider a{
-  background-color: var(--basic-red);
-  color: var(--white);
   font-size: 14px;
   line-height: 18px;
 }
 
-.slider a:hover{
+.button{
+  background-color: var(--basic-red);
+  color: var(--white);
+}
+
+.button:hover{
   background-color: var(--hover-red);
 }
 
-.slider a:active{
+.button:active{
   background-color: var(--active-red);
 }
 
 .slider-button{
   list-style: none;
 }
+
+.button slider-link{
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-red);
+}
+
 
 .offers{
  list-style: none;
@@ -271,6 +293,19 @@ r: var(--rectangle);
  font-weight: bold;
  font-size: 24px;
  line-height: 30px;
+}
+
+.offers li{
+  width: 300px;
+  height: 123px;
+}
+
+.offers h3{
+ font-family: Cuprum;
+ font-weight: bold;
+ font-size: 24px;
+ line-height: 30px;
+ color: var(--white);
 }
 
 .offer-link{
@@ -291,39 +326,35 @@ r: var(--rectangle);
 
 .materials-offer{
  background-color: var(--special-yellow);
- width: 300px;
- height: 123px;
 }
 
 .tools-offer{
  background-color: var(--special-blue);
- width: 300px;
- height: 123px;
 }
 
 .tech-offer{
  background-color: var(--special-lilac);
- width: 300px;
- height: 123px;
 }
 
 .discount-offer{
  background-color: var(--special-greenlight);
- width: 300px;
- height: 123px;
 }
 
 .delivery-offer{
   background-color: var(--special-yellow);
-  width: 300px;
-  height: 123px;
 }
 
 .section-header {
   text-transform: uppercase;
   background-color: var(--cream);
-  width: 940px;
-  height: 89px;
+}
+
+.section-header h2{
+font-family: Cuprum;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
 }
 
 .section-header a{
@@ -334,10 +365,13 @@ r: var(--rectangle);
 
 /* Filters */
 
+.cream{
+  background-color: var(--special-cream);
+}
+
 .filters{
   line-height: 18px;
   text-transform: uppercase;
-  background-color: var(--special-cream);
 }
 
 .filter ul {
@@ -348,6 +382,21 @@ r: var(--rectangle);
 .filter-input-checkbox:hover + label,
 .filter-input-checkbox:focus + label {
   color: var(--special);
+}
+
+.filter-section{
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter-brands{
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.input-price{
+font-size: 17px;
 }
 
 /* popular */
@@ -384,21 +433,31 @@ r: var(--rectangle);
 }
 
 .popular-brands{
+ border: 1px solid var(--border-grey);
  list-style: none;
  text-align: center;
  display: inline;
 }
 
 .popular-brands li:hover{
-  border: 1px solid var(--border-grey);
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 
 }
 
 .popular-brands li:active{
-  border: 1px solid var(--border-grey);
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   opacity: 0.5;
+}
+
+/*sorting*/
+
+.sorting-button{
+  list-style: none;
+  opacity: 0.3;
+}
+
+.sorting-item a:hover{
+text-decoration: underline dashed #EE3643;
 }
 
 /*service*/
@@ -478,17 +537,18 @@ background-color: var(--grey-blue);
   display: inline;
 }
 
-.main-footer li:hover{
-text-decoration: underline;
-}
-
 .main-footer a{
   color: var(--white);
+}
+
+.main-footer a:hover{
+text-decoration: underline;
 }
 
 .main-footer a:active{
   color: var(--basic-background);
   opacity: 0.5;
+  text-decoration: none
 }
 
 .yellow-footer a{
@@ -498,6 +558,7 @@ text-decoration: underline;
 .yellow-footer a:active{
   color: var(--special-yellowlight);
   opacity: 0.5;
+  text-decoration: none
 }
 
 .footer-phone{
@@ -543,4 +604,5 @@ color: var(--special-yellowlight);
 .mailto:active,
 .creator:active{
   color: var(--active-red);
+  text-decoration: none;
 }

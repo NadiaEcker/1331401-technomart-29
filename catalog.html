@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <title>Техномарт</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body inner-page">
   <header class="main-header">
     <div class="main-navigation">
-      <a class="main-header-logo"><img src="img/logo.png" width="106,83px" height="16,9px" alt="Логотип «Техномарт»"></a>
-    <form class="search">
-      <label>Поиск
-        <input class="search-input" name="Search" type="search" id="Search" placeholder="Поиск"></label>
-    </form>
+      <a class="main-header-logo"><img src="img/logo.png" width="108" height="18ы" alt="Техномарт"></a>
+      <form class="search">
+        <input class="search-input" name="Search" type="search" id="Search" placeholder="Поиск">
+      </form>
       <a class="main-navigation-link link-marker" href="blank.html">Закладки</a>
       <a class="main-navigation-link link-basket basket-full" href="blank.html">Корзина: 10</a>
       <a class="main-navigation-link link-order" href="blank.html">Оформить заказ</a>
@@ -49,49 +48,50 @@
 
   <main class="container">
 
-  <h1>Перфораторы</h1>
-
   <ul class="breadcrumbs">
     <li><a href="index.html">Главная страница</a></li>
     <li><a href="catalog.html">Каталог</a></li>
     <li><a href="blank.html">Инструмент</a></li>
     <li><a href="blank.html">Перфораторы</a></li>
 </ul>
+
+<div class="section-catalog"><h1>Перфораторы</h1></div>
+
 <aside class="filters">
-<h2>Фильтр:</h2>
-<form class="filter" action="#" method="get" >
-<fieldset>
-<legend>Цена</legend>
-<label>от<input type="text" value="0"></label>
-<label>до<input type="text" value="30000"></label>
-</fieldset>
-<fieldset>
-<legend>Производители</legend>
-<label><input type="checkbox" name="brands" checked value="bosch">BOSCH</label>
-<label><input type="checkbox" name="brands" value="interskol">Интерскол</label>
-<label><input type="checkbox" name="brands" checked value="makita">MAKITA</label>
-<label><input type="checkbox" name="brands" value="dewaly">DEWALT</label>
-<label><input type="checkbox" name="brands" value="hitachi">HITACHI</label>
-</fieldset>
-<fieldset>
-<legend>Питание</legend>
-<label><input type="checkbox" name="battery" checked value="battery">Аккумуляторные</label>
-<label><input type="checkbox" name="network" value="network">Сетевые</label>
-</fieldset>
-<button type="submit">Показать</button>
+<div class="cream"><h2>Фильтр:</h2></div>
+<form class="filter" action="#" method="get">
+ <fieldset class="cream">
+ <legend class="filter-section">Цена</legend>
+ <label>от<input class="input-price" type="text" value="0"></label>
+ <label>до<input class="input-price" type="text" value="30000"></label>
+ </fieldset>
+ <fieldset>
+ <legend class="filter-section">Производители</legend>
+ <label><input class="filter-item" type="checkbox" name="brands" checked value="bosch">BOSCH</label>
+ <label><input class="filter-item" type="checkbox" name="brands" value="interskol">Интерскол</label>
+ <label><input class="filter-item" type="checkbox" name="brands" checked value="makita">MAKITA</label>
+ <label><input class="filter-item" type="checkbox" name="brands" value="dewaly">DEWALT</label>
+ <label><input class="filter-item" type="checkbox" name="brands" value="hitachi">HITACHI</label>
+ </fieldset>
+ <fieldset>
+ <legend class="filter-section">Питание</legend>
+ <label><input class="filter-item" type="checkbox" name="battery" checked value="battery">Аккумуляторные</label>
+ <label><input class="filter-item" type="checkbox" name="network" value="network">Сетевые</label>
+ </fieldset>
+ <button type="submit">Показать</button>
 </form>
 <aside>
 
-<section>
+<section class="cream">
 <h2>Сортировка</h2>
 <ul class="sorting-button">
-  <li><a href="#">По цене</a></li>
-  <li><a href="#">По типу</a></li>
-  <li><a href="#">По функционлау</a></li>
+  <li class="sorting-item"><a href="#">По цене</a></li>
+  <li class="sorting-item"><a href="#">По типу</a></li>
+  <li class="sorting-item"><a href="#">По функционлау</a></li>
 </ul>
-<ul>
-  <li><a href="#">По возрастанию</a></li>
-  <li><a href="#">По убыванию</a></li>
+<ul class="sorting-button">
+  <li class="sorting-item"><a href="#">По возрастанию</a></li>
+  <li class="sorting-item"><a href="#">По убыванию</a></li>
 </ul>
 </section>
 
