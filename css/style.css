@@ -4,18 +4,21 @@
   --hover-red: #CA2C37;
   --active-red: #BA2732;
   --basic-green: #63A63E;
+  --success: #5FBB2D;
+  --special-greenlight: #8ED78F;
+  --rectangle-button: #518534;
   --basic-grey: #3D546F;
   --active-grey: #A9A9A9;
   --border-grey: #EAEAEA;
   --basic-greylight: #C5C5C5;
+  --button-grey: #888888;
+  --pagination-grey: #E5E5E5;
   --basic-background: #F1F5F7;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
-  --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
   --activeblue: #1D2739;
-  --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
   --special: #663d15;
@@ -64,8 +67,6 @@ margin: -1px;
 
 .main-header{
   font-family: "Cuprum";
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   background-color: var(--basic-background);
@@ -76,7 +77,7 @@ margin: -1px;
   background-color: var(--darkblue);
 }
 
-.main-header-logo{
+.logo{
   background-color: var(--basic-red);
   color: var(--white);
 }
@@ -94,6 +95,8 @@ color: var(--white);
   background-color: var(--white);
   color: var(--black);
 }
+
+/*main navigation*/
 
 .main-navigation-link {
   color: var(--white);
@@ -119,6 +122,8 @@ color: var(--white);
   color: var(--basic-greylight);
 }
 
+/*about company*/
+
 .about-company {
  font-style: italic;
  font-size: 16px;
@@ -139,6 +144,8 @@ color: var(--white);
   line-height: 30px;
   color: var(--basic-red);
 }
+
+/*enter*/
 
 .enter-link{
   font-size: 21px;
@@ -219,11 +226,18 @@ color: var(--white);
   color: var(--basic-greylight);
 }
 
+/*breadcrumbs*/
+
 .breadcrumbs {
   list-style: none;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 18px;
+}
+
+.breadcrumbs a{
+ text-decoration: none;
+ color: var(--black);
 }
 
 .section-catalog{
@@ -239,19 +253,15 @@ color: var(--white);
 
 .slider h3{
   font-family: Cuprum;
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
   color: var(--white);
-  background-color: var(--rectangle);
 }
 
 .slider p{
   font-family: Cuprum;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
@@ -289,7 +299,6 @@ color: var(--white);
 .offers{
  list-style: none;
  font-family: Cuprum;
- font-style: normal;
  font-weight: bold;
  font-size: 24px;
  line-height: 30px;
@@ -351,16 +360,8 @@ color: var(--white);
 
 .section-header h2{
 font-family: Cuprum;
-font-style: normal;
-font-weight: normal;
 font-size: 30px;
 line-height: 30px;
-}
-
-.section-header a{
-  style: none;
-  background-color: var(--active-red);
-  color: var(--white);
 }
 
 /* Filters */
@@ -399,7 +400,43 @@ line-height: 30px;
 font-size: 17px;
 }
 
-/* popular */
+/*sorting*/
+
+.sorting-section{
+  font-family: PT Sans;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.sorting-button li{
+  list-style: none;
+  }
+
+.sorting-item a{
+ color:  var(--basic-greylight);
+ text-decoration: underline dotted var(--basic-red);
+}
+
+.sorting-item a:hover{
+  color: var(--black);
+  text-decoration: underline solid var(--basic-red);
+}
+
+.sorting-item a:active{
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+
+/* catalog */
+
+.new{
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-red);
+  color: var(--white);
+}
 
 .products-list {
   list-style: none;
@@ -425,18 +462,82 @@ font-size: 17px;
 }
 
 .products-list a{
-  background-color: var(--basic-red);
-  color: var(--white);
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
 }
 
+.products{
+  border: 1px solid var(--border-grey);
+}
+
+.price{
+font-family: PT Sans;
+font-weight: bold;
+font-size: 17px;
+line-height: 18px;
+background-color: var(--basic-red);
+color: var(--white);
+}
+
+.button-buy{
+font-family: Cuprum;
+font-size: 14px;
+line-height: 18px;
+color: var(--white);
+background-color: var(--basic-green);
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+box-shadow: inset 0px -3px 0px #367315;
+border-radius: 2px;
+}
+
+.button-buy:hover{
+  background-color: var(--success);
+}
+
+.button-buy:active{
+  background-color: var(--rectangle-button);
+}
+
+.button-saved{
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--grey-blue);
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: var(--white);
+}
+
+.button-saved:hover{
+border: 3px solid var(--grey-blue);
+box-sizing: border-box;
+border-radius: 2px;
+}
+
+.button-saved:active{
+color: var(--button-grey);
+border: 3px solid var(--button-grey);
+box-sizing: border-box;
+border-radius: 2px;
+}
+
+/*popular-brands*/
+
 .popular-brands{
- border: 1px solid var(--border-grey);
  list-style: none;
  text-align: center;
  display: inline;
+}
+
+.popular-brands{
+   border: 1px solid var(--border-grey);
 }
 
 .popular-brands li:hover{
@@ -449,18 +550,8 @@ font-size: 17px;
   opacity: 0.5;
 }
 
-/*sorting*/
-
-.sorting-button{
-  list-style: none;
-  opacity: 0.3;
-}
-
-.sorting-item a:hover{
-text-decoration: underline dashed #EE3643;
-}
-
 /*service*/
+
 .service{
 background-color: var(--basic-background);
 }
@@ -514,6 +605,48 @@ font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 24px;
+}
+/*pagination*/
+
+.pagination-list {
+  list-style: none;
+  line-height: 18px;
+}
+
+.pagination-item a {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--pagination-grey);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.pagination-item a:hover {
+  border: 1px solid var(  --basic-greylight);
+}
+
+.pagination-item a:active{
+  background-color: var(--basic-red);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:active{
+  background-color: var(--basic-red);
+}
+
+/*perforator*/
+
+.perforator{
+  background-color: var(--basic-background);
+}
+
+.perforator h2{
+  font-family: Cuprum;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+
 }
 
 /*footer*/
